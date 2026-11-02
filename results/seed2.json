@@ -1,0 +1,273 @@
+{
+  "description": "Independent synthetic hourly electricity benchmark, NOT Google TimesFM-3 results",
+  "configs": {
+    "dataset": "synthetic",
+    "seeds": 1,
+    "steps": 160,
+    "context": 96,
+    "horizon": 24,
+    "stride": 24,
+    "train_cutoff": 864,
+    "shift_start": 1152
+  },
+  "runs": [
+    {
+      "seed": 2,
+      "train_windows": 373,
+      "last_training_loss": 0.033806588500738144,
+      "splits": {
+        "in_domain": {
+          "origins": [
+            864,
+            888,
+            912,
+            936,
+            960,
+            984,
+            1008,
+            1032,
+            1056,
+            1080,
+            1104,
+            1128
+          ],
+          "metrics": {
+            "seasonal_naive": {
+              "mae": 1.92874,
+              "rmse": 2.60023,
+              "mase": 1.00054,
+              "n_origins": 12,
+              "n_values": 864
+            },
+            "ridge_multivariate": {
+              "mae": 2.57237,
+              "rmse": 3.21499,
+              "mase": 1.33261,
+              "n_origins": 12,
+              "n_values": 864
+            },
+            "ridge_no_future_cov": {
+              "mae": 3.85981,
+              "rmse": 5.05573,
+              "mase": 1.99311,
+              "n_origins": 12,
+              "n_values": 864
+            },
+            "mini_alt_attention": {
+              "mae": 1.73817,
+              "rmse": 2.21005,
+              "mase": 0.90374,
+              "n_origins": 12,
+              "n_values": 864
+            },
+            "mini_temporal_only": {
+              "mae": 6.93406,
+              "rmse": 8.5409,
+              "mase": 3.57532,
+              "n_origins": 12,
+              "n_values": 864
+            },
+            "mini_trained_no_future_cov": {
+              "mae": 9.65863,
+              "rmse": 11.01551,
+              "mase": 4.97836,
+              "n_origins": 12,
+              "n_values": 864
+            }
+          },
+          "delta_ci_vs_seasonal": {
+            "ridge_multivariate": {
+              "delta_mean": -0.643625869349425,
+              "ci95": [
+                -0.898152945772688,
+                -0.36540422744221585
+              ]
+            },
+            "ridge_no_future_cov": {
+              "delta_mean": -1.9310750688241611,
+              "ci95": [
+                -2.766396910239418,
+                -1.2651280358602934
+              ]
+            },
+            "mini_alt_attention": {
+              "delta_mean": 0.19057418406009674,
+              "ci95": [
+                -0.06123814238235354,
+                0.5009019926190375
+              ]
+            },
+            "mini_temporal_only": {
+              "delta_mean": -5.005323886871338,
+              "ci95": [
+                -5.3829768061637875,
+                -4.630073595046997
+              ]
+            },
+            "mini_trained_no_future_cov": {
+              "delta_mean": -7.729887008666992,
+              "ci95": [
+                -8.052517247200011,
+                -7.367093551158905
+              ]
+            }
+          }
+        },
+        "shift": {
+          "origins": [
+            1152,
+            1176,
+            1200,
+            1224,
+            1248,
+            1272,
+            1296,
+            1320,
+            1344,
+            1368,
+            1392,
+            1416,
+            1440,
+            1464
+          ],
+          "metrics": {
+            "seasonal_naive": {
+              "mae": 2.30446,
+              "rmse": 3.02735,
+              "mase": 1.19503,
+              "n_origins": 14,
+              "n_values": 1008
+            },
+            "ridge_multivariate": {
+              "mae": 8.71259,
+              "rmse": 10.73604,
+              "mase": 4.53349,
+              "n_origins": 14,
+              "n_values": 1008
+            },
+            "ridge_no_future_cov": {
+              "mae": 9.99503,
+              "rmse": 12.60822,
+              "mase": 5.18512,
+              "n_origins": 14,
+              "n_values": 1008
+            },
+            "mini_alt_attention": {
+              "mae": 8.54904,
+              "rmse": 9.6691,
+              "mase": 4.46765,
+              "n_origins": 14,
+              "n_values": 1008
+            },
+            "mini_temporal_only": {
+              "mae": 12.66105,
+              "rmse": 15.98876,
+              "mase": 6.58831,
+              "n_origins": 14,
+              "n_values": 1008
+            },
+            "mini_trained_no_future_cov": {
+              "mae": 11.89293,
+              "rmse": 14.62255,
+              "mase": 6.15829,
+              "n_origins": 14,
+              "n_values": 1008
+            }
+          },
+          "delta_ci_vs_seasonal": {
+            "ridge_multivariate": {
+              "delta_mean": -6.408137629397986,
+              "ci95": [
+                -7.319743540011722,
+                -5.178435476796347
+              ]
+            },
+            "ridge_no_future_cov": {
+              "delta_mean": -7.690570885051372,
+              "ci95": [
+                -8.787580073004358,
+                -6.388972471682431
+              ]
+            },
+            "mini_alt_attention": {
+              "delta_mean": -6.24458646774292,
+              "ci95": [
+                -7.152344310283661,
+                -5.0507579207420354
+              ]
+            },
+            "mini_temporal_only": {
+              "delta_mean": -10.356596946716309,
+              "ci95": [
+                -11.64810938835144,
+                -8.70019931793213
+              ]
+            },
+            "mini_trained_no_future_cov": {
+              "delta_mean": -9.588472366333008,
+              "ci95": [
+                -10.347539830207825,
+                -8.644389963150024
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 12.29,
+  "aggregate": {
+    "in_domain": {
+      "seasonal_naive": {
+        "mean_mase": 1.00054,
+        "sd_mase": null
+      },
+      "ridge_multivariate": {
+        "mean_mase": 1.33261,
+        "sd_mase": null
+      },
+      "ridge_no_future_cov": {
+        "mean_mase": 1.99311,
+        "sd_mase": null
+      },
+      "mini_alt_attention": {
+        "mean_mase": 0.90374,
+        "sd_mase": null
+      },
+      "mini_temporal_only": {
+        "mean_mase": 3.57532,
+        "sd_mase": null
+      },
+      "mini_trained_no_future_cov": {
+        "mean_mase": 4.97836,
+        "sd_mase": null
+      }
+    },
+    "shift": {
+      "seasonal_naive": {
+        "mean_mase": 1.19503,
+        "sd_mase": null
+      },
+      "ridge_multivariate": {
+        "mean_mase": 4.53349,
+        "sd_mase": null
+      },
+      "ridge_no_future_cov": {
+        "mean_mase": 5.18512,
+        "sd_mase": null
+      },
+      "mini_alt_attention": {
+        "mean_mase": 4.46765,
+        "sd_mase": null
+      },
+      "mini_temporal_only": {
+        "mean_mase": 6.58831,
+        "sd_mase": null
+      },
+      "mini_trained_no_future_cov": {
+        "mean_mase": 6.15829,
+        "sd_mase": null
+      }
+    }
+  }
+}
